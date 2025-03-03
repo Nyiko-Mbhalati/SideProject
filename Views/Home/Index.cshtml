@@ -3,31 +3,97 @@
 }
 
 <main>
-    <section class="row" aria-labelledby="aspnetTitle">
-        <h1 id="title">ASP.NET</h1>
-        <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-        <p><a href="https://asp.net" class="btn btn-primary btn-md">Learn more &raquo;</a></p>
-    </section>
+    <div class="box">
+        <div class="carousel">
+            <div class="carousel-container fade show">
+                <img src="image1.jpg" class="carousel-image-1">
+            </div>
+            <div class="carousel-container fade show">
+                <img src="image2.jpg" class="carousel-image-2">
+            </div>
+            <div class="carousel-container fade show">
+                <img src="image3.jpg" class="carousel-image-3">
+            </div>
 
-    <div class="row">
-        <section class="col-md-4" aria-labelledby="gettingStartedTitle">
-            <h2 id="gettingStartedTitle">Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="librariesTitle">
-            <h2 id="librariesTitle">Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </section>
-        <section class="col-md-4" aria-labelledby="hostingTitle">
-            <h2 id="hostingTitle">Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-outline-dark" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </section>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Dots for slide navigation -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+
+        <div class="welcome">
+            <div class="welocome-content">
+                <div class="welcome-content-text">
+                    <div class="logo">
+                        <img src="icon.jpg" alt="icon">
+                        <h3>Bulletin</h3>
+                    </div>
+                    <div class="heading">
+                        <h1 id="welcom-heading">Welcome</h1>
+                        <div class="bulletin">
+                            <div class="bulletin-container">
+                                <div class="bulletin-text-content">
+                                    <p class="bulletin-text" id="bulletin-text">Keep up to date with the latest events. Take a look at upcoming and past events bellow.</p>
+                                </div>
+                                <div class="table-container">
+                                    <table class="bulletin-table" id="bulletin-table">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Bulletin Items</th>
+                                        </tr>
+                                        <tr>
+                                            <td>30-09-2024</td>
+                                            <td>Lecture - Web Programming 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>07-10-2024</td>
+                                            <td>Lecture - Web Programming 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14-10-2024</td>
+                                            <td>Lecture - Web Programming 3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>21-10-2024</td>
+                                            <td>Lecture - Web Programming 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>28-10-2024</td>
+                                            <td>Lecture - Web Programming 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>03-11-2024</td>
+                                            <td>Assignment 2 Due Date</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="welcome-text">
+                            <p id="welcome-paragraph">
+                                We're excited to have you here! This bulletin is your go-to place for the latest updates, important announcements, and upcoming events. Whether you're catching up on news or looking for specific information, we've got everything organized to keep you informed and engaged.
+                                Feel free to explore, stay connected, and never miss out on what’s happening. We're glad you're part of our community, and we look forward to sharing many more updates with you!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div id="page-selection" style="text-align: center;">
+                    <h2>Login or register to view your bulletin.</h2>
+                    <div class="welcome-content-buttons" style="margin-top: 20px;">
+                        <div class="login">
+                            <button class="button" type="button" id="login">Login</button>
+                        </div>
+                        <div class="register">
+                            <button class="button" type="button" id="register">Register</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
