@@ -1,0 +1,125 @@
+﻿
+@{
+    ViewBag.Title = "Register";
+}
+
+<link rel="stylesheet" href="~/Content/Register.css" />
+
+<main>
+    <div class="box">
+        <div class="form-container">
+            <form class="contained-form" id="myForm">
+
+                <div class="logo">
+                    <img src="~/Content/Images/icon.jpg" alt="icon">
+                    <h3>Bulletin</h3>
+                </div>
+
+                <div>
+                    <h1>Registration</h1>
+                    <!-- All fields are. -->
+                    <p>
+                        Welcome! Please fill in the details below to create your account.
+                        <br> By registering, you'll gain access to our exclusive bulletin, where you can stay updated on the latest news, events, and important announcements. Don't miss out on valuable information tailored just for you!
+                    </p>
+                </div>
+
+                <div class="actual-inputs">
+                    <div class="input-container">
+
+                        <div class="inputs-left">
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="full-name" class="input-label">Fullname</label>
+                                    <input type="text" id="full-name" placeholder="Nyiko Mbhalati" oninput="checkFullname()" required>
+                                    <span class="error-message" id="full-name-error" style="visibility: hidden;">Please enter your name</span>
+                                </div>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="username" class="input-label">Username</label>
+                                    <input type="text" id="username" placeholder="Nyiko123" oninput="checkUsername()" required>
+                                    <span class="error-message" id="username-error" style="visibility: hidden;">Please enter your username</span>
+                                </div>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="email" class="input-label">Email</label>
+                                    <input type="email" id="email" placeholder="example@gmail.com" oninput="checkEmail()" required>
+                                    <span class="error-message" id="email-error" style="visibility: hidden;">Please enter a valid email</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inputs-right">
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="phone-number" class="input-label">Phone Number</label>
+                                    <input type="text" id="phone-number" placeholder="+27614045028" oninput="checkCorrectFormat()" required>
+                                    <div id="phone-number-error" style="visibility:hidden; color:tomato; font-size: 12px;">Ensure format is correct. Example: +27123456789</div>
+                                </div>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="password" class="input-label">Password</label>
+                                    <input type="password" id="password" placeholder="Password" oninput="checkPasswordLength()" required>
+                                    <div id="password-error" style="visibility:hidden; color:tomato; font-size: 12px;">Password must be at least 4 characters.</div>
+                                    <span class="error-message" id="password-error" style="visibility: hidden;">Please enter your password</span>
+                                </div>
+                            </div>
+
+                            <div class="input-box">
+                                <div class="input-field">
+                                    <label for="confirm-password" class="input-label">Confirm Password</label>
+                                    <input type="password" id="confirm-password" placeholder="Confirm Password" oninput="checkConfirmedPassword()" required>
+                                    <div id="confirm-password-error" style="visibility:hidden; color:tomato; font-size: 12px;">Ensure that your password matches</div>
+                                    <span class="error-message" id="confirm-password-error" style="visibility: hidden;">Ensure that your password is correct</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="submit">
+                    <div>
+                        <div>
+                            <input type="checkbox" id="subscribe" class="checkbox"> I confirm that the information provided is accurate.
+                        </div>
+                        <div style="justify-content: space-between;">
+                            <div style="margin: 0;">
+                                <button type="reset" class="button" id="Reset">Reset Form</button>
+                            </div>
+                            <div style="margin: 0;">
+                                <button type="submit" class="button" id="Add">Register</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="table">
+        <table id="tablerecords">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User records will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+
+</main>
+

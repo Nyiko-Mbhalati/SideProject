@@ -1,0 +1,109 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+<link rel="stylesheet" href="~/Content/Login.css" />
+
+<main>
+    <div class="box">
+        <div class="forms-wrap-text">
+            <div class="forms-wrap-text-content">
+                <div class="logo">
+                    <img src="~/Content/Images/icon.jpg" alt="icon">
+                    <h3>Bulletin</h3>
+                </div>
+                <div class="heading">
+                    <h1>Welcome</h1>
+                </div>
+                <div class="paragraph">
+                    <p>
+                        We're excited to have you here! This bulletin is your go-to place for the latest updates, important announcements, and upcoming events. Whether you're catching up on news or looking for specific information, we've got everything organized to keep you informed and engaged.
+                        <br>Feel free to explore, stay connected, and never miss out on what’s happening. We're glad you're part of our community, and we look forward to sharing many more updates with you!
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="forms-wrap-form">
+            <div class="forms-wrap-form-content">
+                <div class="heading">
+                    <h2>Sign-in</h2>
+                    <h3>Not registered yet?</h3>
+                    <a href="Register.html" class="toggle">Sign up</a>
+                </div>
+                <div class="actual-form">
+                    <div class="input-wrap">
+                        <div class="input-wrap-content">
+                            <form action="" class="sign-in-form" autocomplete="off" id="myForm">
+                                <div class="email">
+                                    <input type="email" class="input-field" placeholder="Email" id="email" autocomplete="email" required />
+                                    <span class="error-message" id="username-error" style="visibility: hidden;">Please enter your username</span>
+                                </div>
+                                <div class="password">
+                                    <input type="password" class="input-field" placeholder="Password" id="password" autocomplete="current-password" required />
+                                    <span class="error-message" id="password-error" style="visibility: hidden;">Please enter your password</span>
+                                </div>
+                                <div class="submit">
+                                    <button type="submit" class="submit-button" id="signInButton">Sign in</button>
+                                </div>
+                                <div>
+                                    <button id="deregisterBtn" class="deregister-button">Deregister</button>
+                                </div>
+                                <div class="check-box">
+                                    <input class="check-box" type="checkbox" name="remember-me" id="rememberMe">
+                                    <label for="check">Remember me</label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Forgotten your password?</p>
+                    <a href="#" class="toggle" id="getHelpLink" onclick="getHelp()">Get help</a>
+                    <div>
+                        <a href="#" class="toggle" id="delete">Deregister my account</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="carousel">
+            <div class="carousel-container fade show">
+                <img src="~/Content/Images/image1.jpg" class="carousel-image-1">
+            </div>
+            <div class="carousel-container fade show">
+                <img src="~/Content/Images/image2.jpg" class="carousel-image-2">
+            </div>
+            <div class="carousel-container fade show">
+                <img src="~/Content/Images/image3.jpg" class="carousel-image-3">
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Dots for slide navigation -->
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="table">
+        <table id="tablerecords">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- User records will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+</main>
+
