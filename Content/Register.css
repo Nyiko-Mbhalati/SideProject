@@ -1,0 +1,515 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, *::before, *::after
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2d4fe2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: none; /* Hide links by default */
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    background-color: #2d4fe2;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: right;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: max-height 0.3s ease-out;
+    max-height: 0; /* Initially collapsed */
+    overflow: hidden; /* Hide overflowing content */
+
+}
+.navbar-links.active {
+    max-height: 300px; /* Adjust based on the number of items */
+}
+
+.navbar-links li {
+    margin: 10px 0;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 8px 15px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+    background-color: #f03434;
+    border-radius: 5px;
+}
+
+.navbar a.active{
+    font-weight: bold;
+    font-size: 1.05em;
+    color: tomato;
+    border-radius:5px;
+    background-color: white;
+}
+
+/* Responsive Navbar (Mobile View) */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block; /* Show toggle button on mobile */
+        font-size: 24px;
+        color: white;
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+
+    .navbar-links.active {
+        display: flex; /* Show links when active */
+    }
+}
+/* Hide the toggle button on larger screens */
+@media (min-width: 769px) {
+    .navbar-toggle {
+        display: none;
+    }
+
+    .navbar-links {
+        display: flex; /* Show links by default on larger screens */
+        flex-direction: row;
+        position: static;
+        width: auto;
+        box-shadow: none;
+        max-height: none;
+    }
+
+    .navbar-links li {
+        margin-left: 20px;
+        margin: 0;
+    }
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+main
+{
+    max-width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    padding: 2rem;
+    align-items:center;
+    justify-content: center;
+    display: flex;
+    background-image: url(University-of-Pretoria-scaled.jpeg);
+    background-size: cover;
+    background-position: 60%;
+}
+
+.logo
+{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logo img
+{
+    width: 27px;
+    margin: 0.2rem;
+}
+
+.logo h3
+{
+    font-size: 1.1rem;
+    letter-spacing: -1px;
+}
+
+.text
+{
+    padding: 10px;
+}
+
+.box
+{
+    position: relative;
+    width: 100%;
+    max-width: 1020px;
+    height: 850px;
+    border-radius: 3.3rem;
+    box-shadow: 0 60px 40px -30px  rgba(0, 0, 0, 0.27);
+    background-color: #fff;
+}
+
+.inner-box
+{
+    display: none;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.form-container
+{
+    /* display: none; */
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+}
+
+.form-container form
+{
+    height: 100%;
+}
+
+.form-container p
+{
+    margin-right: 50px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+.actual-inputs
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.input-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the two inputs */
+    height: 320px;
+}
+
+.inputs-left,
+.inputs-right {
+    width: 50%;
+    padding: 100px;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    margin-top: -70px;
+}
+
+.inputs-left
+{
+    padding-left: 20%;
+}
+.inputs-right
+{
+    padding-right: 20%;
+}
+
+.input-box input
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.input-box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field
+{
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+}
+
+.input-field input
+{
+    height: 40px;
+    font-size: 17px;
+    margin: 10px;
+    padding: 0 20px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0.1px 5px 1px rgba(0,0,0,0.05);
+    outline: none;
+    transition: .3s;
+}
+
+::placeholder
+{
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(160, 160, 160, 0.5);
+    text-align: center;
+}
+
+.input-field input:focus
+{
+    width: 260px;
+    border: 2px solid;
+    border-color: tomato;
+    transition: .3s;
+}
+
+.submit
+{
+    margin-top: 80px;
+}
+
+.check-box
+{
+    margin-right: 10px;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    color: gray;
+}
+
+.button
+{
+    max-width: 300px;
+    margin-top: 20px;
+    width: 100%;
+    height: 40px;
+    background-color: #2d4fe2;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.button:hover
+{
+    width: 105%;
+    background-color:#4d6aec;
+}
+
+.input-label
+{
+    display: inline-flex;
+    font-weight: 600;
+}
+
+span, .error-message
+{
+    /* display: none; */
+    color: tomato;
+    font-size: 12px;
+}
+
+
+table 
+{
+    display: none;
+    width: 80%;
+    margin: 50px auto;
+    border-collapse: collapse;
+    border: 1px solid black;
+    background: linear-gradient(to right, lightpink, purple);
+}
+
+/* Styling table cells */
+table th, table td 
+{
+    border: 1px solid black;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Adding alternate row coloring */
+table tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.footer {
+    height: 60px;
+    position: relative; /* Position relative for absolute positioning of child elements */
+    text-align: center; /* Center the text */
+    padding: 20px; /* Add some padding */
+    background-color: #f1f1f1; /* Light background color */
+}
+
+.floaty-text {
+    position: absolute; /* Absolute positioning to float it */
+    bottom: 10px; /* Position it near the bottom */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Adjust for centering */
+    animation: float 3s ease-in-out infinite; /* Animation for floaty effect */
+}
+
+/* Keyframes for floaty effect */
+@keyframes float {
+    0% { transform: translate(-50%, 0); }
+    50% { transform: translate(-50%, -10px); } /* Move up */
+    100% { transform: translate(-50%, 0); } /* Move back down */
+}
+
+@media  (max-width: 768px) 
+{
+    body
+    {
+        font-size: 14px;
+    }
+
+    .box
+    {
+        height: 1100px;
+    }
+
+    .contained-form
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .input-container
+    {
+        display: block;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .inputs-left,
+    .inputs-right
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .input-box
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        width: 100%;
+        height: 100px;
+    }
+
+    .input-field
+    {
+        padding: 0;
+        margin-left: 0;
+        height: 100px;
+    }
+    .submit
+    {
+        display: block;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 55% ;
+    }
+
+    .submit, .check-box
+    {
+        font-size: 9px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    body
+    {
+        font-size: 14px;
+    }
+
+    .box
+    {
+        height: 1200px;
+    }
+
+    .contained-form
+    {
+        width: 100%;
+        height: 100%;
+    }
+
+    .form-container
+    {
+        width: 100%;
+        height: 100%;
+    }
+    .input-container
+    {
+        display: inline-block;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .inputs-left,
+    .inputs-right
+    {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .input-box
+    {
+        margin: 0;
+        padding: 0;
+        font-size: 12px;
+        width: 100%;
+        height: 100px;
+    }
+
+    .input-field
+    {
+        padding: 0;
+        margin-left: 0;
+        height: 100px;
+    }
+    .submit
+    {
+        display: inline-block;
+        width: 400px;
+        margin-top: 270px;
+        padding-right: 230px;
+    }
+
+    .submit, .check-box
+    {
+        font-size: 9px;
+    }
+}
