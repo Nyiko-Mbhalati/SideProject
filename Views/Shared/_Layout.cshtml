@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
     <link rel="stylesheet" href="~/Content/Site.css" />
-    <script src="~/Content/Index.js"></script>
 </head>
 <body>
     <header>
@@ -17,18 +16,24 @@
                 ☰
             </button>
             <ul class="navbar-links">
-                <li><a href="Index.html" class="active-link">Home</a></li>
-
-                <li><a href="Register.html">Register</a></li>
-                <li><a href="Login.html">Login</a></li>
+                <li class="active-link">@Html.ActionLink("Home", "Index", "Home")</li>
+                <li class="active-link">@Html.ActionLink("Register", "Register", "Home")</li>
+                <li class="active-link">@Html.ActionLink("Login", "Login", "Home")</li>
             </ul>
         </nav>
     </header>
-    
+
     @RenderBody();
 
     <footer class="footer">
         <p class="floaty-text">Created by Nyiko Mbhalati &#169; 2024 </p>
     </footer>
 </body>
+
 </html>
+
+<script src="~/Content/Bulletin Access.js"></script>
+<script src="~/Content/Index.js"></script>
+<script src="~/Content/Register.js"></script>
+<script src="~/Content/Login.js"></script>
+<script src="~/Content/Bulletin.js"></script>
